@@ -22,12 +22,12 @@ frontend http-in
     mode http
     default_backend app-backend
 
-backend app-backend
-    mode http
-    balance roundrobin
-        stats enable
-        stats uri /haproxy?stats
-        balance roundrobin
-        {% for host in groups["webservers"] %}
-        server {{ host }} {{ hostvars[host]["ansible_default_ipv4"]["address"] }}:5000 check
+#backend app-backend
+ #   mode http
+  #  balance roundrobin
+   #     stats enable
+    #    stats uri /haproxy?stats
+     #   balance roundrobin
+      #  {% for host in groups["webservers"] %}
+       # server {{ host }} {{ hostvars[host]["ansible_default_ipv4"]["address"] }}:5000 check
 {% endfor %}
