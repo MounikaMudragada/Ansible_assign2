@@ -103,8 +103,9 @@
              dest: /etc/nginx/sites-available/default
          
     - name: Restart nginx
-      ansible.builtin.shell:
-        cmd: "sudo service nginx restart"          
+      service:
+        name: nginx
+        state: restarted          
             
     - name: Configure HAProxy
       template:
