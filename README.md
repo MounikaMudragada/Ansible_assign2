@@ -4,3 +4,7 @@ The Ansible playbook (site.yaml) assumes that the necessary servers are already 
 
 The site.yaml playbook can be customized to specify user names, SSH key paths, python application settings, nginx configurations and other variables as needed.
 
+
+
+
+
