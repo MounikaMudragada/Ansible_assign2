@@ -15,7 +15,7 @@ stream {
     upstream snmp_backend {
        
         {% for host in groups["webservers"] %}
-        server {{ hostvars[host].ansible_default_ipv4.address }}:161 check
+        server {{ hostvars[host].ansible_default_ipv4.address }}:161;
         {% endfor %}
     }
 
