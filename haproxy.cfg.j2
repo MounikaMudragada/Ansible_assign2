@@ -13,9 +13,9 @@ defaults
     log                     global
     option                  httplog
     option                  dontlognull
-    timeout connect         10
-    timeout client          60
-    timeout server          100
+    timeout connect         10s
+    timeout client          60s
+    timeout server          100s
 
 frontend http-in
     bind *:80
