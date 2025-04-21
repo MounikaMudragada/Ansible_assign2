@@ -1,9 +1,14 @@
-[HAproxy]  
-HAproxy 
-[webservers]  
-devA 
+[local]
+localhost ansible_connection=local  
+
+
+[lb] 
+HAproxy
+
+[app] 
+devA
 devB
-devC
+devC  
 
 [all:vars]  
 ansible_user=ubuntu  
